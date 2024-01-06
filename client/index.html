@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>chitchat-home</title>
+      <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <script src="https://unpkg.com/tailwindcss-cdn@3.3.4/tailwindcss.js"></script>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="src/style.css" type="text/css" media="all" />
+   </head>
+   <body class="scroll-smooth min-h-screen bg-white text-slate-700 dark:bg-slate-800 dark:text-white">
+      <header class="sticky z-10 flex flex-row top-0 w-full h-20 bg-blue-500/[.7] backdrop-blur-sm md:h-36" data-aos="fade-out">
+         <section class="relative top-2 left-[-20px] w-[200px] text-center flex justify-center items-center flex-row sm:top-5 md:w-[300px]" data-aos="flip-right">
+           <div class="w-[85px] h-[85px] overflow-hidden o rounded-full">
+            <img src="img/logo.png" class="w-[80px] h-[80px] object-cover" alt="" />
+           </div>
+            <h1 class="text-2xl font-light uppercase p-2.5 md:text-3xl"><a class="ml-[-25px]" href="#">hit chat</a></h1>
+         </section>
+         <section class="w-8 absolute top-3 right-[30px] flex flex-row md:top-10">
+            <div class="flex items-center justify-center text-center bg-[#65d5c1] w-[45px] h-10 rounded px-3 dark:bg-[#65d5c1ba] text-center m-2 md:hidden" onclick="openNav()" data-aos="zoom-in" data-aos-delay="1590">
+               <iconify-icon icon="ph:list-bold" class="text-3xl mt-[4px]"></iconify-icon>
+            </div>
+         </section>
+      </header>
+      <!-- main code -->
+   <main class="max-w-4xl mx-auto mt-5 mb-[100px] md:ml-[350px] md:p-5">
+              <!-- home tab -->
+       <div id="tab1" class="tab-content w-full ">
+          <div class="m-5">
+           <h1 class=" uppercase text-4xl font-sans">Feeds</h1>
+          </div>
+        
+        </div>
+        
+        <!-- chatting tab -->
+      <div id="tab2" class="tab-content hidden">
+        <div class="m-5 ">
+               <h1 class="uppercase text-4xl font-sans">chat</h1>
+            </div>
+      </div>
+        
+        <!-- friends tab -->
+        <div id="tab3" class="tab-content hidden">
+            <div class="m-5 ">
+               <h1 class="uppercase text-3xl font-sans">add friends</h1>
+            </div>
+          <div class="p-5 m-2.5 w-80">
+           
+           </div>   
+        </div>
+
+        <!-- setting tab -->
+        <div id="tab4" class="tab-content hidden">
+            <div class="m-5 ">
+               <h1 class="uppercase text-4xl font-sans">settings</h1>
+               <div class="">
+                  
+               </div>
+            </div>
+        </div>
+   </main>
+         <!-- BOTTOM NAV  -->
+   <nav id="bottomNav" class="text-center z-30 bg-slate-200 p-5 fixed right-0 bottom-0 w-full flex justify-around dark:bg-slate-600 md:text-5xl md:h-[100px] md:top-5 md:right-0 md:w-[600px] md:bg-transparent">
+        <a href="#" class="text-[30px] flex items-center space-x-2 px-2 py-1 rounded-md text-slate-700 hover:text-blue-500 dark:text-white flex justify-center items-center md:text-5xl" onclick="changeTab(1)">
+           <iconify-icon icon="iconamoon:home-fill"></iconify-icon>
+        </a>
+
+        <a href="#" class="text-[30px] flex items-center space-x-2 px-2 py-1 rounded-md text-slate-700 hover:text-blue-500 dark:text-white flex justify-center items-center md:text-5xl" onclick="changeTab(2)">
+            <iconify-icon icon="fluent:chat-24-filled" class="md:text-6xl"></iconify-icon>
+        </a>
+        
+        <a href="#" class="text-[30px] flex items-center space-x-2 px-2 py-1 rounded-md text-slate-700 hover:text-blue-500 dark:text-white flex justify-center items-center md:text-5xl" onclick="changeTab(3)">
+          <iconify-icon icon="mdi:account-multiple-add"></iconify-icon>
+        </a>
+        
+        <a href="#" class="text-[30px] flex items-center space-x-2 px-2 py-1 rounded-md text-slate-700 hover:text-blue-500 dark:text-white flex justify-center items-center md:text-5xl" onclick="changeTab(4)">
+            <iconify-icon icon="line-md:cog-filled-loop"></iconify-icon>
+        </a>
+    </nav>
+               <!-- nav content -->   
+      <div id="navcontent" class="flex flex-col w-full bg-slate-200 fixed top-0 left-0 rounded-b-2xl z-20 p-5 hidden dark:bg-slate-500 md:block md:w-[300px] md:h-full md:left-0 md:m-0 md:top-[144px] md:rounded-none md:shadow-xl">
+        <!-- this div that contains welcome samueldev,the samueldev must change to the client username --> 
+        <div class="w-full m-2.5 p-1.5 h-[100px] text-2xl"><p>welcome! <b id="user">samueldev</b></p></div>
+       <div class="flex flex-col">
+        <div class="absolute right-2.5 top-2.5 z-10 text-4xl md:hidden" onclick="closeNav()"><button>&times;</button></div>
+          <a href="index.html"  class="inline-block p-5 text-[20px] duration-150 hover:text-blue-400 hover:text-[30px]">home</a>
+          <a href="#"  class="inline-block p-5 text-[20px] duration-150 hover:text-blue-400 hover:text-[30px]">about</a>
+          <a href="#"  class="inline-block p-5 text-[20px] duration-150 hover:text-blue-400 hover:text-[30px]">profile</a>
+          <a href="#"  class="inline-block p-5 text-[20px] duration-150 hover:text-blue-400 hover:text-[30px]">follwers</a>
+        </div>
+        <div class="flex flex-col ">
+         <a href="login.html">
+            <div class="w-[80%] mx-auto py-2.5 px-5 bg-blue-500 rounded-2xl text-center uppercase ">
+              login
+            </div>
+          </a>
+        </div>
+      </div>   
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="src/main.js" type="text/javascript" charset="utf-8"></script>
+   </body>
+</html>

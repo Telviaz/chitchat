@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/tailwindcss-cdn@3.3.4/tailwindcss.js"></script>
+    <title>chitchat-Login Page</title>
+</head>
+<body class="bg-gray-100 dark:bg-slate-800 text-gray-800 dark:text-gray-200">
+
+        <div class="fixed top-5 right-5 text-5xl"><a href="JavaScript:self.history.back()">&times;</a></div>
+
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md w-80">
+            <h2 class="text-3xl font-extrabold mb-6 text-gray-800 dark:text-gray-200">Welcome Back!</h2>
+
+            <!-- Login Form -->
+            <form>
+                <!-- Add your form fields here -->
+                <div class="mb-4">
+                    <label for="username" class="block text-sm font-medium text-gray-600 dark:text-gray-300">Username</label>
+                    <input type="text" id="username" name="username" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-600 dark:text-gray-300">Password</label>
+                    <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring focus:border-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                </div>
+
+                <button type="submit" class="bg-blue-500 dark:bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Login</button>
+                <div class="inline-flex text-[15px] text-slate-400 p-5"><p>don't have an account? <a href="signup.html" class="underline">sign up</a></p></div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
